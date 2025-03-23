@@ -36,15 +36,17 @@ export default App
 */
 
 import { Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Error404 from "./Error404";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import LogementDetails from "./pages/LogementDetails";
+import Error404 from "./pages/Error404";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/logement/:id" element={<LogementDetails />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
   );
